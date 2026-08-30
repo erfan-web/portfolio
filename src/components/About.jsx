@@ -1,0 +1,139 @@
+import { ArrowRight } from "lucide-react";
+import about from "../assets/images/me/avatar-resized/about-cover 358.360.webp";
+import { socialIcons } from "../data";
+function About() {
+  return (
+    <section
+      id="about"
+      className="min-h-screen px-4 py-20 lg:px-6
+    overflow-hidden relative flex items-center"
+    >
+      <div
+        className="max-w-6xl mx-auto w-full
+      items-center grid grid-cols-1 
+      lg:grid-cols-2 gap-12 lg:gap-16 relative z-10"
+      >
+        <div
+          className="order-2 lg:order-1
+        flex flex-col items-center lg:items-start
+        text-center lg:text-start"
+          data-aos="fade-left"
+        >
+          <div
+            className="inline-flex items-center
+          gap-2 px-4 py-1.5 rounded-full bg-indigo-500/10
+          border border-indigo-500/20 mb-4"
+          >
+            <span
+              className="size-2 rounded-full bg-indigo-500
+            animate-pulse"
+            />
+            <span
+              className="text-xs sm:text-sm font-medium
+            dark:text-indigo-300 text-indigo-600"
+            >
+              درباره من
+            </span>
+          </div>
+          <h2
+            className="
+          text-3xl sm:text-4xl lg:text-5xl font-bold
+          mb-6 dark:text-white text-gray-900 
+          leading-tight"
+          >
+            از ایده تا{" "}
+            <span
+              className="text-indigo-600
+             dark:text-indigo-400
+            "
+            >
+              تجربه دیجیتال
+            </span>
+          </h2>
+          <p
+            className="text-base lg:text-lg
+          mb-8 leading-relaxed dark:text-gray-300
+          text-gray-700 max-w-xl"
+          >
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+            استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در
+            ستون و سطرآنچنان که لازم است
+          </p>
+          <div className="flex gap-4 mb-8">
+            {socialIcons.map((social, index) => {
+              const IconComponent = social.icon;
+              return (
+                <a
+                  key={index}
+                  href={social.href}
+                  aria-label={social.alt}
+                  data-aos="zoom-in"
+                  data-aos-delay={index * 1000}
+                  className={`
+                  size-12 rounded-full flex
+                  items-center justify-center
+                  text-xl border border-gray-200
+                  dark:border-gray-800 bg-white/50
+                  dark:bg-gray-900/50 backdrop-blur-sm
+                  dark:text-gray-300 text-gray-700
+                  transition-all duration-300
+                  hover:scale-110 hover:shadow-lg ${social.color}`}
+                >
+                  <IconComponent />
+                </a>
+              );
+            })}
+          </div>
+          <a href="#contact" data-aos="fade-up" data-aos-delay="300">
+            <button
+              className="group inline-flex
+                items-center justify-center gap-2 px-8
+                py-3 rounded-full text-white font-medium
+                bg-linear-to-l from-indigo-600 to-indigo-800
+                transition-all duration-300 
+                transform hover:scale-105
+                hover:shadow-[0_0_40px_rgba(105,108,255,0.7)]
+                text-base"
+            >
+              <ArrowRight size={20} />
+              بیا صحبت کنیم
+            </button>
+          </a>
+        </div>
+          <div
+            className="relative order-1 lg:order-2
+          flex justify-center"
+            data-aos="fade-right"
+          >
+            <div
+              className="relative w-full
+            max-w-sm sm:max-w-md"
+            >
+              <div
+                className="absolute inset-0 bg-linear-to-l
+              from-indigo-600 to-indigo-800
+              rounded-[40%_60%_60%/40%_60%_70%] filter
+              blur-xl opacity-40 animate-pulse"
+              />
+
+              <div
+                className="absolute inset-0 bg-linear-to-l
+              from-indigo-600 to-indigo-800
+              rounded-[40%_60%_60%/40%_60%_70%] transform
+              rotate-3 scale-105"
+              />
+              <img
+                src={about}
+                alt="About"
+                className="relative z-10 rounded-[40%_60%_60%/40%_60%_70%]
+                shadow-2xl w-full h-auto object-cover border-2
+                border-indigo-500/30 backdrop-blur-sm"
+              />
+            </div>
+          </div>
+      </div>
+    </section>
+  );
+}
+
+export default About;
