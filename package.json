@@ -9,16 +9,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@vitejs/plugin-react": "^5.0.0",
     "@tailwindcss/vite": "latest",
+    "@vitejs/plugin-react": "^5.0.0",
     "aos": "latest",
     "framer-motion": "latest",
     "lucide-react": "latest",
     "react": "latest",
     "react-dom": "latest",
     "react-icons": "latest",
+    "sonner": "^2.0.8",
     "tailwindcss": "latest",
     "vite": "^7.0.0"
-  },
-  "devDependencies": {}
+  }
 }

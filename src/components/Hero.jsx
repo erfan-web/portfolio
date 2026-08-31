@@ -97,9 +97,9 @@ function Hero() {
               className="mb-6 leading-relaxed max-w-md lg:max-w-lg
             dark:text-gray-300 text-gray-700 text-sm lg:text-base"
             >
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-              استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
-              در ستون و سطرآنچنان که لازم است
+              فرانت اند دولوپری متعهد و دقیق که رابط های کاربری را از طرح فیگما
+              تا پیاده سازی نهایی با React، Next.js و Tailwind تمیز، ریسپانسیو و
+              قابل نگهداری می سازد.
             </p>
             <div className="flex gap-8 mb-7">
               {[
@@ -143,7 +143,7 @@ function Hero() {
                 رزومه من
               </a>
               <a
-                href={"#تماس"}
+                href="#contact"
                 className="w-full sm:w-auto inline-flex
                 items-center justify-center gap-2 px-8
                 py-3 rounded-full dark:text-white text-black hover:text-white font-medium

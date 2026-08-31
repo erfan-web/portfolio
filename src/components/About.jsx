@@ -54,10 +54,14 @@ function About() {
             className="text-base lg:text-lg
           mb-8 leading-relaxed dark:text-gray-300
           text-gray-700 max-w-xl"
-          >
-            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-            استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در
-            ستون و سطرآنچنان که لازم است
+            >
+            نزدیک به یک سال است که مسیر فرانت اند را جدی دنبال می کنم و تمرکزم
+            روی ساخت رابط هایی است که هم به طراحی وفادار باشند و هم در کد تمیز،
+            ریسپانسیو و قابل توسعه بمانند. با وجود محدودیت های سخت افزاری، تلاش
+            کردم مسیر یادگیری ام متوقف نشود؛ از React و Tailwind تا کار با Figma
+            و مفاهیم UI/UX را با تمرین و پروژه واقعی جلو بردم. هدفم ورود به یک
+            تیم حرفه ای، رشد در محیط واقعی و نشان دادن نتیجه تعهد و مسئولیت
+            پذیری ام است.
           </p>
           <div className="flex gap-4 mb-8">
             {socialIcons.map((social, index) => {
@@ -66,9 +70,11 @@ function About() {
                 <a
                   key={index}
                   href={social.href}
+                  target="_blank"
+                  rel="noreferrer"
                   aria-label={social.alt}
                   data-aos="zoom-in"
-                  data-aos-delay={index * 1000}
+                  data-aos-delay={(index+1) * 500}
                   className={`
                   size-12 rounded-full flex
                   items-center justify-center

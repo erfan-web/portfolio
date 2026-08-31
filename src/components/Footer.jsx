@@ -33,9 +33,8 @@ function Footer() {
           <div className="space-y-4 lg:col-span-5">
             <img src={logoFooter} alt="logo" />
             <p className="text-gray-700 dark:text-gray-300 text-sm">
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-              استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در
-              ستون و سطرآنچنان که لازم است.
+              فرانت اند دولوپر با تمرکز روی React، Next.js، Tailwind و پیاده سازی
+              دقیق رابط های کاربری از روی Figma.
             </p>
           </div>
           <div className="space-y-4 lg:col-span-3">
@@ -47,16 +46,16 @@ function Footer() {
             </h5>
             <div className="flex flex-col gap-3">
               <a
-                href="$"
+                href="tel:09192716228"
                 className="text-gray-700 dark:text-gray-300
             hover:text-indigo-500 text-sm
             dark:hover:text-white inline-flex gap-2"
               >
                 <Phone size={20} />
-                +98 919 271 6228
+                <span dir="ltr">+98 919 271 6228</span>
               </a>
               <a
-                href="$"
+                href="mailto:erfanahmadi.web@gmail.com"
                 className="text-gray-700 dark:text-gray-300
             hover:text-indigo-500 text-sm
             dark:hover:text-white inline-flex gap-2"
@@ -102,9 +101,11 @@ function Footer() {
                   <a
                     key={social.alt}
                     href={social.href}
+                    target="_blank"
+                    rel="noreferrer"
                     aria-label={social.alt}
                     data-aos="zoom-in"
-                    data-aos-delay={(i + 1) * 1000}
+                    data-aos-delay={(i + 1) * 500}
                     className={`
                   size-9 rounded-full flex shrink-0
                   items-center justify-center

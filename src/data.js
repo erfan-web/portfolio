@@ -41,25 +41,25 @@ export const socialIcons = [
   {
     icon: FaInstagram,
     alt: "Instagram",
-    href: "#",
+    href: "https://www.instagram.com/erfanahmadi.dev",
     color: `hover:text-pink-500 hover:border-pink-500/40`,
   },
   {
     icon: FaLinkedin,
     alt: "Linkedin",
-    href: "#",
+    href: "https://www.linkedin.com/in/erfan-dev",
     color: `hover:text-blue-500 hover:border-blue-500/40`,
   },
   {
     icon: FaGithub,
     alt: "Github",
-    href: "#",
+    href: "https://github.com/erfan-web",
     color: `hover:text-purple-500 hover:border-purple-500/40`,
   },
   {
     icon: FaTelegram,
     alt: "Telegram",
-    href: "#",
+    href: "https://t.me/erfanahmadyii",
     color: `hover:text-blue-500 hover:border-blue-500/40`,
   },
 ];
@@ -79,31 +79,58 @@ export const skills = [
   { name: "MongoDB", icon: SiMongodb },
 ];
 
-import project1 from "./assets/images/projects/project-1.webp";
+import project1 from "./assets/images/projects/project-1.png";
 import project2 from "./assets/images/projects/project-2.webp";
 import project3 from "./assets/images/projects/project-3.webp";
 export const projects = [
   {
     id: 1,
-    title: "داشبورد مدیریت",
+    title: "فروشگاه آنلاین Rabbit",
     description:
-      "یک رابط تمیز و واکنش گرا برای مدیریت داده ها و گزارش های روزانه.",
+      "فروشگاه آنلاین لباس با پنل مدیریت، پنل کاربری، فیلتر محصولات، جست وجو، احراز هویت و اتصال به درگاه پرداخت زیبال. بخش هایی مثل routing، سرچ بار، پرداخت و ذخیره سازی توکن با تصمیم های شخصی بازطراحی و پیاده سازی شده اند.",
     image: project1,
-    tags: ["React", "Tailwind"],
+    tags: ["React", "TypeScript", "Redux", "Tailwind", "Node.js", "MongoDB"],
+    repositoryLinks: [
+      {
+        label: "فرانت اند",
+        href: "https://github.com/erfan-web/rabbit-frontend-ecommerce",
+      },
+      {
+        label: "بک اند",
+        href: "https://github.com/erfan-web/rabbit-backend-ecommerce",
+      },
+    ],
+    demoUrl: "https://rabbit-frontend-ecommerce.vercel.app",
   },
   {
     id: 2,
-    title: "وب سایت فروشگاهی",
-    description: "طراحی صفحه محصول، سبد خرید و تجربه خرید ساده برای کاربران.",
+    title: "ساختمان یار کرج",
+    description:
+      "MVP یک وب اپ سبک برای مدیریت ساختمان های ۱۰ تا ۵۰ واحدی در کرج؛ با تمرکز روی شفافیت شارژ، ثبت و پیگیری تعمیرات، اطلاع رسانی و تجربه ساده برای مدیر ساختمان و ساکنین. برای این پروژه علاوه بر پیاده سازی، مستندات UX و فرضیه های محصول هم آماده شده است.",
     image: project2,
-    tags: ["UI", "Frontend"],
+    tags: ["React", "TypeScript", "Bootstrap", "UX/UI", "MVP"],
+    repositoryLinks: [
+      {
+        label: "ریپازیتوری",
+        href: "https://github.com/erfan-web/sakhtemanyar",
+      },
+    ],
+    demoUrl: "https://sakhtemanyar.vercel.app",
   },
   {
     id: 3,
-    title: "لندینگ شخصی",
-    description: "صفحه معرفی حرفه ای با تمرکز روی سرعت، خوانایی و جزئیات بصری.",
+    title: "پورتفولیوی شخصی",
+    description:
+      "وب سایت شخصی برای معرفی مسیر کاری، مهارت ها، پروژه ها و راه های ارتباطی؛ طراحی شده با نگاه دقیق به UI/UX، دارک مود، ساختار RTL و پیاده سازی تمیز از روی Figma.",
     image: project3,
-    tags: ["Vite", "Responsive"],
+    tags: ["Vite", "React", "Tailwind", "Figma", "RTL"],
+    repositoryLinks: [
+      {
+        label: "ریپازیتوری",
+        href: "https://github.com/erfan-web/portfolio",
+      },
+    ],
+    demoUrl: "#hero",
   },
 ];
 
@@ -111,19 +138,19 @@ export const socialsFooter = [
   {
     icon: FaLinkedin,
     alt: "Linkedin",
-    href: "#",
+    href: "https://www.linkedin.com/in/erfan-dev",
     color: `hover:text-blue-500 hover:border-blue-500/40`,
   },
   {
     icon: FaGithub,
     alt: "Github",
-    href: "#",
+    href: "https://github.com/erfan-web",
     color: `hover:text-purple-500 hover:border-purple-500/40`,
   },
   {
     icon: FaTelegram,
     alt: "Telegram",
-    href: "#",
+    href: "https://t.me/erfanahmadyii",
     color: `hover:text-blue-500 hover:border-blue-500/40`,
   },
 ];

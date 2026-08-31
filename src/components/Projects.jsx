@@ -250,22 +250,25 @@ function Projects() {
                     className="flex items-center gap-4
                     pt-2 border-t dark:border-zinc-800/80 border-gray-100"
                   >
-                    <a
-                      href="#"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5
-                      text-xs font-medium transition-colors duration-300
-                      dark:text-gray-400 text-gray-600
-                      dark:hover:text-white hover:text-black"
-                    >
-                      <FaGithub size={14} />
-                      ریپازیتوری
-                    </a>
+                    {project.repositoryLinks.map((link) => (
+                      <a
+                        key={link.href}
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5
+                        text-xs font-medium transition-colors duration-300
+                        dark:text-gray-400 text-gray-600
+                        dark:hover:text-white hover:text-black"
+                      >
+                        <FaGithub size={14} />
+                        {link.label}
+                      </a>
+                    ))}
 
                     <a
-                      href="#"
-                      target="_blank"
+                      href={project.demoUrl}
+                      target={project.demoUrl.startsWith("#") ? undefined : "_blank"}
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5
                       text-xs font-medium transition-colors duration-300

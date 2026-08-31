@@ -41,6 +41,21 @@
   font-display: swap;
 }
 
+@theme {
+  --font-display: "Shabnam", system-ui, sans-serif;
+  --color-indigo-50: #f5f5fa;
+  --color-indigo-100: #e9e9f2;
+  --color-indigo-200: #d1d1e2;
+  --color-indigo-300: #aeaec9;
+  --color-indigo-400: #8585aa;
+  --color-indigo-500: #606087;
+  --color-indigo-600: #48486a;
+  --color-indigo-700: #343451;
+  --color-indigo-800: #292940;
+  --color-indigo-900: #202033;
+  --color-indigo-950: #141420;
+}
+
 .dark {
   color-scheme: dark;
 }
@@ -50,7 +65,7 @@ html {
 }
 
 body {
-  font-family: "Shabnam", system-ui, sans-serif;
+  font-family: var(--font-display);
   overflow-x: hidden;
 }
 
@@ -59,16 +74,19 @@ body {
   color: white;
 }
 
-@theme {
-  --color-indigo-50:#F5F5FA;
-  --color-indigo-100:#E9E9F2;
-  --color-indigo-200:#D1D1E2;
-  --color-indigo-300:#AEAEC9;
-  --color-indigo-400:#8585AA;
-  --color-indigo-500:#606087;
-  --color-indigo-600:#48486A;
-  --color-indigo-700:#343451;
-  --color-indigo-800:#292940;
-  --color-indigo-900:#202033;
-  --color-indigo-950:#141420;
+@keyframes toast-progress {
+  from {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(0);
+  }
+}
+.portfolio-toast {
+  right: 0;
+}
+@media screen and (min-width: 768px) {
+  .portfolio-toast {
+    right: max(32px, calc((100vw - 72rem) / 2 - 32px)) !important;
+  }
 }
