@@ -1,9 +1,13 @@
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { Moon, Sun } from "lucide-react";
 import { useState } from "react";
 import { navItems } from "../data.js";
+import { useScrolled } from "../hooks/useScrolled.js";
 function BottomNavbar({ darkMode, toggleDarkMode }) {
-  const [activeTab, setActiveTab] = useState("خانه");
+  const [activeTab, setActiveTab] = useState("hero");
+
+  const isScrolled = useScrolled(92);
+
   return (
     <nav className="fixed z-50 bottom-0 left-0 right-0 flex justify-center lg:hidden">
       <motion.nav
@@ -13,22 +17,37 @@ function BottomNavbar({ darkMode, toggleDarkMode }) {
         className="relative w-[95%] max-w-4xl mb-4"
       >
         <div className="relative bg-linear-to-l from-indigo-600 to-indigo-800 backdrop-blur-xl rounded-2xl border border-white/20 px-3 py-2">
-          <div className="absolute -top-5 left-3">
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={toggleDarkMode}
-              className="p-2 rounded-full bg-gray-900 
-              dark:bg-gray-100 transition-colors 
-              backdrop-blur-sm"
-            >
-              {darkMode ? (
-                <Sun className="size-5 text-black" />
-              ) : (
-                <Moon className="size-5 text-white" />
-              )}
-            </motion.button>
-          </div>
+          {/* Theme Button */}
+          <AnimatePresence>
+            {isScrolled && (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.7, y: 10 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.7, y: 10 }}
+                transition={{ duration: 0.2 }}
+                className="absolute -top-5 left-3 z-20"
+              >
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  onClick={toggleDarkMode}
+                  className="
+                    p-2 rounded-full
+                    bg-gray-900 dark:bg-gray-100
+                    transition-colors
+                    backdrop-blur-sm
+                  "
+                  aria-label="تغییر تم"
+                >
+                  {darkMode ? (
+                    <Sun className="size-5 text-black" />
+                  ) : (
+                    <Moon className="size-5 text-white" />
+                  )}
+                </motion.button>
+              </motion.div>
+            )}
+          </AnimatePresence>{" "}
           <div className="flex items-center gap-1 justify-around">
             {navItems.map((item) => {
               const Icon = item.icon;

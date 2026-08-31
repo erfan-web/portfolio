@@ -58,3 +58,17 @@ body {
   background: var(--color-indigo-500);
   color: white;
 }
+
+@theme {
+  --color-indigo-50:#F5F5FA;
+  --color-indigo-100:#E9E9F2;
+  --color-indigo-200:#D1D1E2;
+  --color-indigo-300:#AEAEC9;
+  --color-indigo-400:#8585AA;
+  --color-indigo-500:#606087;
+  --color-indigo-600:#48486A;
+  --color-indigo-700:#343451;
+  --color-indigo-800:#292940;
+  --color-indigo-900:#202033;
+  --color-indigo-950:#141420;
+}

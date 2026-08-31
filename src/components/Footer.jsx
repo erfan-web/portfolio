@@ -4,16 +4,30 @@ import { navItems, socialsFooter } from "../data";
 function Footer() {
   return (
     <footer
-      className="border-t bg-linear-to-bl
-    from-indigo-400 to-white
-    dark:bglinear-to-bl dark:from-indigo-950
-    dark:to-black"
+      className="  relative
+    bg-linear-to-bl from-indigo-400 to-white
+    dark:bg-linear-to-bl dark:from-indigo-950 dark:to-black
+
+    before:absolute
+    before:top-0
+    before:left-0
+    before:right-0
+    before:h-0.5
+    before:bg-linear-to-l
+    before:from-indigo-900/80
+    before:via-indigo-700/30
+    before:to-indigo-500/20
+    before:from-10% 
+
+    dark:before:from-indigo-600
+    dark:before:via-indigo-400
+    dark:before:to-indigo-200"
     >
       <div className="container px-6 max-w-6xl mx-auto">
         <div
           className="grid grid-cols-1 lg:grid-cols-12 py-12 gap-12"
           data-aos="fade-left"
-
+          data-aos-delay="200"
         >
           {/* Logo and about */}
           <div className="space-y-4 lg:col-span-5">
@@ -31,10 +45,9 @@ function Footer() {
             >
               راه‌های ارتباطی
             </h5>
-            <div className="space-y-3">
+            <div className="flex flex-col gap-3">
               <a
-              href="#"
-              target="_blank"
+                href="$"
                 className="text-gray-700 dark:text-gray-300
             hover:text-indigo-500 text-sm
             dark:hover:text-white inline-flex gap-2"
@@ -43,8 +56,7 @@ function Footer() {
                 +98 919 271 6228
               </a>
               <a
-              href="#"
-              target="_blank"
+                href="$"
                 className="text-gray-700 dark:text-gray-300
             hover:text-indigo-500 text-sm
             dark:hover:text-white inline-flex gap-2"
@@ -110,7 +122,24 @@ function Footer() {
             </div>
           </div>
         </div>
-        <div className="py-6 border-t">
+        <div
+          className="py-6 relative
+            before:absolute
+    before:top-0
+    before:left-0
+    before:right-0
+    before:h-0.5
+    before:bg-linear-to-br
+    before:from-indigo-900/80
+    before:via-indigo-700/30
+    before:to-indigo-500/20
+    before:from-10% 
+
+    dark:before:from-indigo-600
+    dark:before:via-indigo-400
+    dark:before:to-indigo-200
+ "
+        >
           <p className="text-center dark:text-white text-black text-sm">
             1405 تمامی حقوق مادی و معنوی این سایت متعلق به عرفان احمدی می‌باشد.
             ©
