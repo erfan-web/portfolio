@@ -84,7 +84,7 @@ function Hero() {
               className="text-4xl sm:text-5xl lg:text-6xl
             mb-3 font-bold dark:text-white text-gray-900"
             >
-              سلام، من <span className="text-indigo-600 ">عرفانم</span>
+              سلام، من <span className="text-indigo-600 dark:text-indigo-400 ">عرفانم</span>
             </h1>
             <h2
               className="text-xl sm:text-2xl mb-4
