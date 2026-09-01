@@ -97,6 +97,7 @@ export const projects = [
       },
     ],
     demoUrl: "#hero",
+    desginLinks: "https://www.figma.com/design/GD4O9bnzEdTagnUgMEf0Ol/portfolio?node-id=0-1&t=HW2tI14StMTD4TT9-1"
   },
   {
     id: 2,

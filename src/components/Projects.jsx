@@ -1,10 +1,11 @@
-import { ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
+import { ChevronLeft, ChevronRight, ExternalLink, PenTool } from "lucide-react";
 
 import { useEffect, useRef, useState } from "react";
 
 import { projects } from "../data.js";
 
 import { FaGithub } from "react-icons/fa";
+import { MdDesignServices } from "react-icons/md";
 
 function Projects() {
   const scrollRef = useRef(null);
@@ -268,7 +269,9 @@ function Projects() {
 
                     <a
                       href={project.demoUrl}
-                      target={project.demoUrl.startsWith("#") ? undefined : "_blank"}
+                      target={
+                        project.demoUrl.startsWith("#") ? undefined : "_blank"
+                      }
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5
                       text-xs font-medium transition-colors duration-300
@@ -278,6 +281,22 @@ function Projects() {
                       <ExternalLink size={14} />
                       لایو دمو
                     </a>
+                    {project.desginLinks && (
+                      <a
+                        href={project.demoUrl}
+                        target={
+                          project.demoUrl.startsWith("#") ? undefined : "_blank"
+                        }
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5
+                      text-xs font-medium transition-colors duration-300
+                      dark:text-gray-400 text-gray-600
+                      dark:hover:text-white hover:text-black"
+                      >
+                        <PenTool size={14}/>
+                        دیزاین
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
