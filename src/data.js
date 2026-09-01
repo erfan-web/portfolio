@@ -80,27 +80,23 @@ export const skills = [
 ];
 
 import project1 from "./assets/images/projects/project-1.png";
-import project2 from "./assets/images/projects/project-2.webp";
-import project3 from "./assets/images/projects/project-3.webp";
+import project2 from "./assets/images/projects/project-2.png";
+import project3 from "./assets/images/projects/project-3.png";
 export const projects = [
   {
     id: 1,
-    title: "فروشگاه آنلاین Rabbit",
+    title: "پورتفولیوی شخصی",
     description:
-      "فروشگاه آنلاین لباس با پنل مدیریت، پنل کاربری، فیلتر محصولات، جست وجو، احراز هویت و اتصال به درگاه پرداخت زیبال. بخش هایی مثل routing، سرچ بار، پرداخت و ذخیره سازی توکن با تصمیم های شخصی بازطراحی و پیاده سازی شده اند.",
-    image: project1,
-    tags: ["React", "TypeScript", "Redux", "Tailwind", "Node.js", "MongoDB"],
+      "وب سایت شخصی برای معرفی مسیر کاری، مهارت ها، پروژه ها و راه های ارتباطی؛ طراحی شده با نگاه دقیق به UI/UX، دارک مود، ساختار RTL و پیاده سازی تمیز از روی Figma.",
+    image: project3,
+    tags: ["Vite", "React", "Tailwind", "Figma", "RTL"],
     repositoryLinks: [
       {
-        label: "فرانت اند",
-        href: "https://github.com/erfan-web/rabbit-frontend-ecommerce",
-      },
-      {
-        label: "بک اند",
-        href: "https://github.com/erfan-web/rabbit-backend-ecommerce",
+        label: "ریپازیتوری",
+        href: "https://github.com/erfan-web/portfolio",
       },
     ],
-    demoUrl: "https://rabbit-frontend-ecommerce.vercel.app",
+    demoUrl: "#hero",
   },
   {
     id: 2,
@@ -119,18 +115,22 @@ export const projects = [
   },
   {
     id: 3,
-    title: "پورتفولیوی شخصی",
+    title: "فروشگاه آنلاین Rabbit",
     description:
-      "وب سایت شخصی برای معرفی مسیر کاری، مهارت ها، پروژه ها و راه های ارتباطی؛ طراحی شده با نگاه دقیق به UI/UX، دارک مود، ساختار RTL و پیاده سازی تمیز از روی Figma.",
-    image: project3,
-    tags: ["Vite", "React", "Tailwind", "Figma", "RTL"],
+      "فروشگاه آنلاین لباس با پنل مدیریت، پنل کاربری، فیلتر محصولات، جست وجو، احراز هویت و اتصال به درگاه پرداخت زیبال. بخش هایی مثل routing، سرچ بار، پرداخت و ذخیره سازی توکن با تصمیم های شخصی بازطراحی و پیاده سازی شده اند.",
+    image: project1,
+    tags: ["React", "TypeScript", "Redux", "Tailwind", "Node.js", "MongoDB"],
     repositoryLinks: [
       {
-        label: "ریپازیتوری",
-        href: "https://github.com/erfan-web/portfolio",
+        label: "فرانت اند",
+        href: "https://github.com/erfan-web/rabbit-frontend-ecommerce",
+      },
+      {
+        label: "بک اند",
+        href: "https://github.com/erfan-web/rabbit-backend-ecommerce",
       },
     ],
-    demoUrl: "#hero",
+    demoUrl: "https://rabbit-frontend-ecommerce.vercel.app",
   },
 ];
 
