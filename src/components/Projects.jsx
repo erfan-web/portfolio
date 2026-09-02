@@ -283,7 +283,7 @@ function Projects() {
                     </a>
                     {project.desginLinks && (
                       <a
-                        href={project.demoUrl}
+                        href={project.desginLinks}
                         target={
                           project.demoUrl.startsWith("#") ? undefined : "_blank"
                         }
