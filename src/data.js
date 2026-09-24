@@ -47,7 +47,7 @@ export const socialIcons = [
   {
     icon: FaLinkedin,
     alt: "Linkedin",
-    href: "https://www.linkedin.com/in/erfan-dev",
+    href: "https://www.linkedin.com/in/erfanahmadyi",
     color: `hover:text-blue-500 hover:border-blue-500/40`,
   },
   {
@@ -139,7 +139,7 @@ export const socialsFooter = [
   {
     icon: FaLinkedin,
     alt: "Linkedin",
-    href: "https://www.linkedin.com/in/erfan-dev",
+    href: "https://www.linkedin.com/in/erfanahmadyi",
     color: `hover:text-blue-500 hover:border-blue-500/40`,
   },
   {
