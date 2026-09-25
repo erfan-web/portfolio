@@ -1,11 +1,10 @@
-import { ChevronLeft, ChevronRight, ExternalLink, PenTool } from "lucide-react";
+import { ChevronLeft, ChevronRight, ExternalLink, PenTool } from 'lucide-react';
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from 'react';
 
-import { projects } from "../data.js";
+import { projects } from '../data.js';
 
-import { FaGithub } from "react-icons/fa";
-import { MdDesignServices } from "react-icons/md";
+import { FaGithub } from 'react-icons/fa';
 
 function Projects() {
   const scrollRef = useRef(null);
@@ -42,14 +41,14 @@ function Projects() {
     // موقع لود شدن وضعیت دکمه‌ها مشخص شود
     checkScrollPosition();
 
-    slider.addEventListener("scroll", checkScrollPosition);
+    slider.addEventListener('scroll', checkScrollPosition);
 
-    window.addEventListener("resize", checkScrollPosition);
+    window.addEventListener('resize', checkScrollPosition);
 
     return () => {
-      slider.removeEventListener("scroll", checkScrollPosition);
+      slider.removeEventListener('scroll', checkScrollPosition);
 
-      window.removeEventListener("resize", checkScrollPosition);
+      window.removeEventListener('resize', checkScrollPosition);
     };
   }, []);
 
@@ -75,18 +74,21 @@ function Projects() {
     */
 
     const targetScroll =
-      direction === "left"
+      direction === 'left'
         ? scrollLeft - scrollAmount
         : scrollLeft + scrollAmount;
 
     slider.scrollTo({
       left: targetScroll,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   };
 
   return (
-    <section id="projects" className="overflow-hidden relative py-20">
+    <section
+      id="projects"
+      className="overflow-hidden relative py-20 lg:scroll-mt-[var(--header-height)]"
+    >
       <div
         className="container px-4 sm:px-8 lg:px-14
         mx-auto relative z-10"
@@ -107,7 +109,7 @@ function Projects() {
                 dark:text-indigo-400"
               >
                 پروژه
-              </span>{" "}
+              </span>{' '}
               های من
             </h2>
           </div>
@@ -115,7 +117,7 @@ function Projects() {
           <div className="flex gap-4">
             {/* Right - برگشت به پروژه‌های قبلی */}
             <button
-              onClick={() => handleScroll("right")}
+              onClick={() => handleScroll('right')}
               disabled={isAtStart}
               aria-label="پروژه قبلی"
               className="p-3 rounded-full
@@ -142,7 +144,7 @@ function Projects() {
 
             {/* Left - رفتن به پروژه‌های بعدی */}
             <button
-              onClick={() => handleScroll("left")}
+              onClick={() => handleScroll('left')}
               disabled={isAtEnd}
               aria-label="پروژه بعدی"
               className="p-3 rounded-full
@@ -270,7 +272,7 @@ function Projects() {
                     <a
                       href={project.demoUrl}
                       target={
-                        project.demoUrl.startsWith("#") ? undefined : "_blank"
+                        project.demoUrl.startsWith('#') ? undefined : '_blank'
                       }
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5
@@ -285,7 +287,7 @@ function Projects() {
                       <a
                         href={project.desginLinks}
                         target={
-                          project.demoUrl.startsWith("#") ? undefined : "_blank"
+                          project.demoUrl.startsWith('#') ? undefined : '_blank'
                         }
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-1.5
@@ -293,7 +295,7 @@ function Projects() {
                       dark:text-gray-400 text-gray-600
                       dark:hover:text-white hover:text-black"
                       >
-                        <PenTool size={14}/>
+                        <PenTool size={14} />
                         دیزاین
                       </a>
                     )}

@@ -15,7 +15,7 @@ function Header({ darkMode, toggleDarkMode }) {
       <div
         className={`
           hidden lg:block
-          absolute top-0 left-0 w-full h-[110px]
+          absolute top-0 left-0 w-full h-[var(--header-height)]
           backdrop-blur-md
           transition-opacity duration-300
           pointer-events-none

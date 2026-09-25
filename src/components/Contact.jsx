@@ -1,7 +1,7 @@
-import { Send } from "lucide-react";
-import { useState } from "react";
-import contactImg from "../assets/images/me/avatar-resized/contact-cover 358.360.webp";
-import { showToast } from "../utils/toast";
+import { Send } from 'lucide-react';
+import { useState } from 'react';
+import contactImg from '../assets/images/me/avatar-resized/contact-cover 358.360.webp';
+import { showToast } from '../utils/toast';
 function Contact() {
   const [loading, setLoading] = useState(false);
   const handleSubmit = async (e) => {
@@ -11,58 +11,61 @@ function Contact() {
     const message = form.message.value.trim();
     // بررسی ایمیل
     if (!email) {
-      showToast("لطفاً ایمیل خود را وارد کنید.", "error");
+      showToast('لطفاً ایمیل خود را وارد کنید.', 'error');
       return;
     }
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!emailRegex.test(email)) {
-      showToast("لطفاً یک ایمیل معتبر وارد کنید.", "error");
+      showToast('لطفاً یک ایمیل معتبر وارد کنید.', 'error');
       return;
     } // بررسی پیام
     if (!message) {
-      showToast("لطفاً پیام خود را وارد کنید.", "error");
+      showToast('لطفاً پیام خود را وارد کنید.', 'error');
       return;
     }
 
     if (message.length < 20) {
-      showToast("لطفاً پیام خود را حداقل در ۲۰ کاراکتر وارد کنید.", "error");
+      showToast('لطفاً پیام خود را حداقل در ۲۰ کاراکتر وارد کنید.', 'error');
       return;
     }
 
     const formData = new FormData(e.target);
 
-    formData.append("access_key", import.meta.env.VITE_WEB3FORMS_KEY);
+    formData.append('access_key', import.meta.env.VITE_WEB3FORMS_KEY);
 
     setLoading(true);
 
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
         body: formData,
       });
 
       const data = await response.json();
 
       if (data.success) {
-        showToast("پیام شما با موفقیت ارسال شد.", "success");
+        showToast('پیام شما با موفقیت ارسال شد.', 'success');
         e.target.reset();
       } else {
-        showToast("ارسال پیام ناموفق بود. لطفاً دوباره تلاش کنید.", "error");
+        showToast('ارسال پیام ناموفق بود. لطفاً دوباره تلاش کنید.', 'error');
       }
     } catch (error) {
       console.error(error);
 
-      showToast("خطایی رخ داد. لطفاً دوباره تلاش کنید.", "error");
+      showToast('خطایی رخ داد. لطفاً دوباره تلاش کنید.', 'error');
     } finally {
       setLoading(false);
     }
   };
   return (
-    <section id="contact" className="py-20 relative overflow-hidden">
+    <section
+      id="contact"
+      className="py-20 relative overflow-hidden lg:scroll-mt-[var(--header-height)]"
+    >
       <div
         className="container mx-auto max-w-6xl
-      relative z-10 px-6"
+      relative z-10 px-6 "
       >
         <div className="text-center mb-6" data-aos="fade-up">
           <h2
@@ -72,7 +75,7 @@ function Contact() {
           >
             <span className="text-indigo-500 dark:text-indigo-400">
               گفت‌وگو
-            </span>{" "}
+            </span>{' '}
             کنیم
           </h2>
         </div>
@@ -119,7 +122,7 @@ function Contact() {
               // required
               // minLength={20}
               name="message"
-              rows={"5"}
+              rows={'5'}
               data-aos="fade-up"
               data-aos-delay="300"
               placeholder="پیام"
