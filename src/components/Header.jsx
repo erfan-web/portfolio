@@ -34,6 +34,7 @@ function Header({ darkMode, toggleDarkMode }) {
               <img
                 src={logoDesktop}
                 alt="لوگو"
+                fetchPriority="high"
                 className="block group-hover:hidden"
               />
 
@@ -50,6 +51,7 @@ function Header({ darkMode, toggleDarkMode }) {
               <img
                 src={logoMobile}
                 alt="لوگو"
+                fetchPriority="high"
                 className="block group-hover:hidden"
               />
 

@@ -131,6 +131,8 @@ function About() {
               <img
                 src={about}
                 alt="About"
+                loading="lazy"
+                decoding="async"
                 className="relative z-10 rounded-[40%_60%_60%/40%_60%_70%]
                 shadow-2xl w-full h-auto object-cover border-2
                 border-indigo-500/30 backdrop-blur-sm"

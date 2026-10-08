@@ -173,6 +173,8 @@ function Contact() {
             <img
               src={contactImg}
               alt="Contact"
+              loading="lazy"
+              decoding="async"
               className="size-96 object-cover rounded-3xl
               relative z-10"
             />

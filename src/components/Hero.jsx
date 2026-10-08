@@ -1,6 +1,7 @@
 import { DownloadIcon, Mail } from "lucide-react";
 import CV from "../assets/CV.pdf";
-import hero from "../assets/images/me/avatar-resized/hero-cover 358.360.webp";
+
+const hero = "/images/hero.webp";
 function Hero() {
   return (
     <section
@@ -37,6 +38,8 @@ function Hero() {
                 <img
                   src={hero}
                   alt="hero"
+                  fetchPriority="high"
+                  decoding="async"
                   className="relative z-10 h-full w-full 
                     rounded-full object-cover transform 
                     group-hover:scale-105 transition-transform
