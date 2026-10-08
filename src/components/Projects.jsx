@@ -60,7 +60,6 @@ function Projects() {
     const { scrollLeft, clientWidth } = slider;
 
     const scrollAmount = clientWidth;
-
     /*
       RTL
 
@@ -170,17 +169,16 @@ function Projects() {
             </button>
           </div>
         </div>
-
-        <div
-          ref={scrollRef}
-          dir="rtl"
-          className="flex gap-6 scrollbar-none
-          snap-mandatory overflow-hidden w-full px-4"
-        >
-          {projects.map((project, i) => (
-            <div
-              key={`${project.id}-${i}`}
-              className="w-full md:w-[calc(50%_-_12px)]
+        <div className="overflow-hidden">
+          <div
+            ref={scrollRef}
+            className="flex gap-6 scrollbar-none
+          snap-mandatory overflow-x-auto snap-x  w-full touch-pan-x touch-pan-y"
+          >
+            {projects.map((project, i) => (
+              <div
+                key={`${project.id}-${i}`}
+                className="w-full md:w-[calc(50%_-_12px)]
               lg:w-[calc(33.33%_-_28px)] 2xl:w-[calc(25%_-_20px)] shrink-0
               snap-start group rounded-3xl
               overflow-hidden border-2 transition-all
@@ -189,103 +187,90 @@ function Projects() {
               hover:border-indigo-500/50 dark:hover:border-indigo-500/50
               hover:shadow-[0_20px_40px_rgba(108,140,255,0.15)]
               flex flex-col"
-            >
-              <div
-                className="relative overflow-hidden aspect-video
-                bg-gray-100 dark:bg-zinc-900"
               >
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform
-                  duration-500 group-hover:scale-105"
-                />
-
                 <div
-                  className="absolute inset-0 bg-linear-to-t
+                  className="relative overflow-hidden aspect-video
+                bg-gray-100 dark:bg-zinc-900"
+                >
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform
+                  duration-500 group-hover:scale-105"
+                  />
+
+                  <div
+                    className="absolute inset-0 bg-linear-to-t
                   from-black/20 to-transparent opacity-0
                   group-hover:opacity-100 transition-opacity duration-300"
-                />
-              </div>
+                  />
+                </div>
 
-              <div
-                className="p-6 flex flex-col justify-between
+                <div
+                  className="p-6 flex flex-col justify-between
                 grow min-h-50"
-              >
-                <div>
-                  <h3
-                    className="text-lg font-bold mb-2
+                >
+                  <div>
+                    <h3
+                      className="text-lg font-bold mb-2
                     dark:text-white text-gray-900
                     group-hover:text-indigo-500
                     dark:group-hover:text-indigo-400
                     transition-colors duration-300"
-                  >
-                    {project.title}
-                  </h3>
+                    >
+                      {project.title}
+                    </h3>
 
-                  <p
-                    className="text-xs leading-relaxed mb-4
-                    dark:text-gray-400 text-gray-600 line-clamp-2"
-                  >
-                    {project.description}
-                  </p>
-                </div>
+                    <p
+                      className="text-xs leading-relaxed mb-4
+                    dark:text-gray-400 text-gray-600 text-justify"
+                    >
+                      {project.description}
+                    </p>
+                  </div>
 
-                <div>
-                  <div
-                    className="flex flex-wrap
+                  <div>
+                    <div
+                      className="flex flex-wrap
                     gap-1.5 mb-4"
-                  >
-                    {project.tags.map((tag, i) => (
-                      <span
-                        key={i}
-                        className="text-[10px] font-medium px-2.5
+                    >
+                      {project.tags.map((tag, i) => (
+                        <span
+                          key={i}
+                          className="text-[10px] font-medium px-2.5
                           py-0.5 rounded-full font-mono
                           dark:bg-indigo-500/10 bg-indigo-500/5
                           dark:text-indigo-300 text-indigo-600"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
 
-                  <div
-                    className="flex items-center gap-4
+                    <div
+                      className="flex items-center gap-4
                     pt-2 border-t dark:border-zinc-800/80 border-gray-100"
-                  >
-                    {project.repositoryLinks.map((link) => (
-                      <a
-                        key={link.href}
-                        href={link.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5
+                    >
+                      {project.repositoryLinks &&
+                        project.repositoryLinks.length > 0 &&
+                        project.repositoryLinks.map((link) => (
+                          <a
+                            key={link.href}
+                            href={link.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5
                         text-xs font-medium transition-colors duration-300
                         dark:text-gray-400 text-gray-600
                         dark:hover:text-white hover:text-black"
-                      >
-                        <FaGithub size={14} />
-                        {link.label}
-                      </a>
-                    ))}
+                          >
+                            <FaGithub size={14} />
+                            {link.label}
+                          </a>
+                        ))}
 
-                    <a
-                      href={project.demoUrl}
-                      target={
-                        project.demoUrl.startsWith('#') ? undefined : '_blank'
-                      }
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5
-                      text-xs font-medium transition-colors duration-300
-                      dark:text-gray-400 text-gray-600
-                      dark:hover:text-white hover:text-black"
-                    >
-                      <ExternalLink size={14} />
-                      لایو دمو
-                    </a>
-                    {project.desginLinks && (
                       <a
-                        href={project.desginLinks}
+                        href={project.demoUrl}
                         target={
                           project.demoUrl.startsWith('#') ? undefined : '_blank'
                         }
@@ -295,15 +280,33 @@ function Projects() {
                       dark:text-gray-400 text-gray-600
                       dark:hover:text-white hover:text-black"
                       >
-                        <PenTool size={14} />
-                        دیزاین
+                        <ExternalLink size={14} />
+                        لایو دمو
                       </a>
-                    )}
+                      {project.desginLinks && (
+                        <a
+                          href={project.desginLinks}
+                          target={
+                            project.demoUrl.startsWith('#')
+                              ? undefined
+                              : '_blank'
+                          }
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5
+                      text-xs font-medium transition-colors duration-300
+                      dark:text-gray-400 text-gray-600
+                      dark:hover:text-white hover:text-black"
+                        >
+                          <PenTool size={14} />
+                          دیزاین
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
