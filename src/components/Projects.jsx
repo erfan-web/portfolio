@@ -119,7 +119,7 @@ function Projects() {
               onClick={() => handleScroll('right')}
               disabled={isAtStart}
               aria-label="پروژه قبلی"
-              className="p-3 rounded-full
+              className="slider-button p-3 rounded-full
               border-2 transition-all duration-300
               dark:border-zinc-200 border-gray-800
               dark:text-white text-gray-800
@@ -146,7 +146,7 @@ function Projects() {
               onClick={() => handleScroll('left')}
               disabled={isAtEnd}
               aria-label="پروژه بعدی"
-              className="p-3 rounded-full
+              className="slider-button p-3 rounded-full
               border-2 transition-all duration-300
               dark:border-zinc-200 border-gray-800
               dark:text-white text-gray-800

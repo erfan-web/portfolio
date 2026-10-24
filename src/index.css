@@ -1,48 +1,48 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 @custom-variant dark (&:where(.dark, .dark *));
 @custom-variant hover (&:hover);
 @font-face {
-  font-family: "Shabnam";
+  font-family: 'Shabnam';
   src:
-    url("/fonts/Shabnam-Light.woff2") format("woff2"),
-    url("/fonts/Shabnam-Light.woff") format("woff");
+    url('/fonts/Shabnam-Light.woff2') format('woff2'),
+    url('/fonts/Shabnam-Light.woff') format('woff');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Shabnam";
+  font-family: 'Shabnam';
   src:
-    url("/fonts/Shabnam-Regular.woff2") format("woff2"),
-    url("/fonts/Shabnam-Regular.woff") format("woff");
+    url('/fonts/Shabnam-Regular.woff2') format('woff2'),
+    url('/fonts/Shabnam-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Shabnam";
+  font-family: 'Shabnam';
   src:
-    url("/fonts/Shabnam-Medium.woff2") format("woff2"),
-    url("/fonts/Shabnam-Medium.woff") format("woff");
+    url('/fonts/Shabnam-Medium.woff2') format('woff2'),
+    url('/fonts/Shabnam-Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Shabnam";
+  font-family: 'Shabnam';
   src:
-    url("/fonts/Shabnam-Bold.woff2") format("woff2"),
-    url("/fonts/Shabnam-Bold.woff") format("woff");
+    url('/fonts/Shabnam-Bold.woff2') format('woff2'),
+    url('/fonts/Shabnam-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @theme {
-  --font-display: "Shabnam", system-ui, sans-serif;
+  --font-display: 'Shabnam', system-ui, sans-serif;
   --color-indigo-50: #f5f5fa;
   --color-indigo-100: #e9e9f2;
   --color-indigo-200: #d1d1e2;
@@ -90,5 +90,12 @@ body {
 @media screen and (min-width: 768px) {
   .portfolio-toast {
     right: max(32px, calc((100vw - 72rem) / 2 - 32px)) !important;
+  }
+}
+
+@media (hover: none) {
+  .slider-button:hover {
+    background-color: transparent;
+    border-color: inherit;
   }
 }
